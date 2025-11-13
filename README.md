@@ -10,6 +10,13 @@ Still under development
 
 | Input | Action |
 |-------|--------|
-| W / A / S / D | Move camera forward / left / backward / right |
+| W | FORWARD |
+| A | LEFT |
+| S | BACKWARD |
+| D | RIGHT | 
+| SPACE | UP |
+| SHIFT | DOWN |
+| CTRL | SPRINT |
+| F2 | CAPTURE MOUSE | 
 
 
