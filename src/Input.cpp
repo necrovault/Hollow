@@ -2,16 +2,6 @@
 
 using namespace hollow;
 
-//KeyStates Input::_keyPressed[400] = { false };
-//KeyStates Input::_keyReleased[400] = { false };
-//KeyStates Input::_keyDown[400] = { false };
-//KeyStates Input::_keyDownLastFrame[400] = { false };
-//
-//MouseStates Input::_mousePressed[10] = { false };
-//MouseStates Input::_mouseReleased[10] = { false };
-//MouseStates Input::_mouseDown[10] = { false };
-//MouseStates Input::_mouseDownLastFrame[10] = { false };
-
 GLFWwindow* Input::window = nullptr;
 
 KeyStates Input::keyStates{};
@@ -79,6 +69,7 @@ void Input::update(){
 			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 		}
 	}
+
 }
 
 bool Input::isKeyPressed(unsigned int key) {

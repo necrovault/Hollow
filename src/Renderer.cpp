@@ -183,7 +183,7 @@ void hollow::Renderer::run() {
 		Utils::bindVAO(lightVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		Window::swapBuffersPollEvents();
+		Window::handleEvents();
 	}
 
 	Utils::deleteVBO(vbo);

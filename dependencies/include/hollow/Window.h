@@ -8,30 +8,31 @@
 #include <iostream>
 
 namespace hollow {
-	class Window {
-	public:
-		static void createWindow(unsigned int width, unsigned int height, std::string title);
-		static bool run();
-		static GLFWwindow* getWindowPointer();
-		static unsigned int getWidth();
-		static unsigned int getHeight();
-		static std::string getTitle();
-		static void setWidth(unsigned int newWidth);
-		static void setHeight(unsigned int newHeight);
-		static void backgroundColor();
-		static void swapBuffersPollEvents();
-		static void close();
-		static void destroy();
 
-	private:
-		static bool _running;
-		static unsigned int _screenWidth;
-		static unsigned int _screenHeight;
-		static std::string _title;
-		static GLFWwindow* _window;
-		static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+	enum WindowMode {
+		WINDOWED,
+		FULLSCREEN
 	};
 
+	namespace Window {
+		void createWindow(unsigned int width, unsigned int height, std::string title);
+		bool run();
+		GLFWwindow* getWindowPointer();
+		unsigned int getWidth();
+		unsigned int getHeight();
+		std::string getTitle();
+		void setWidth(unsigned int newWidth);
+		void setHeight(unsigned int newHeight);
+		void backgroundColor();
+		void setMode(const WindowMode& winMode);
+		void toggleFullscreen();
+		void handleEvents();
+		void setVsync(bool newVsync);
+		bool getVsync();
+		void close();
+		void destroy();
+		
+		void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+	};
 }
-
 
